@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Green Chicken 🐔🏀 Viral Kids T-Shirt</title>
+  <meta name="description" content="The viral TikTok chant shirt kids everywhere are obsessed with. Green Green Chicken 🐔🏀 Everywhere – premium kids tee, $28.99, free US shipping, 30-day guarantee." />
+  <link rel="canonical" href="https://greengreenchicken.store" />
+
+  <!-- OG Meta -->
+  <meta property="og:title" content="Green Green Chicken 🐔🏀 Viral Kids T-Shirt" />
+  <meta property="og:description" content="The viral TikTok chant shirt kids everywhere are obsessed with. Free US shipping. 30-day guarantee." />
+  <meta property="og:image" content="https://greengreenchicken.store/og-image.jpg" />
+  <meta property="og:url" content="https://greengreenchicken.store" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            chicken: '#ff6b00',
+            lime: '#39ff14',
+            dark: '#0a0a0a',
+            card: '#111111',
+          },
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            body: ['Nunito', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body { background: #0a0a0a; color: #f0f0f0; font-family: 'Nunito', sans-serif; overflow-x: hidden; }
+
+    /* ---- Animations ---- */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px #39ff1488, 0 0 40px #39ff1444; }
+      50%       { box-shadow: 0 0 35px #39ff14cc, 0 0 70px #39ff1466; }
+    }
+    @keyframes float-emoji {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { transform: translateY(-110vh) rotate(720deg); opacity: 0; }
+    }
+    @keyframes hero-slide {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes badge-bounce {
+      0%, 100% { transform: scale(1); }
+      50%       { transform: scale(1.06); }
+    }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .pulse-btn {
+      animation: pulse-glow 2s ease-in-out infinite;
+      transition: transform 0.15s;
+    }
+    .pulse-btn:hover { transform: scale(1.04); }
+
+    .hero-anim { animation: hero-slide 0.7s ease forwards; }
+    .hero-anim-2 { animation: hero-slide 0.7s 0.2s ease both; }
+    .hero-anim-3 { animation: hero-slide 0.7s 0.4s ease both; }
+    .hero-anim-4 { animation: hero-slide 0.7s 0.6s ease both; }
+
+    .badge-bounce { animation: badge-bounce 1.8s ease-in-out infinite; }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #39ff14 0%, #fff 40%, #ff6b00 60%, #39ff14 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+
+    .ticker-wrap { overflow: hidden; white-space: nowrap; background: #39ff14; color: #000; }
+    .ticker-track { display: inline-flex; animation: ticker 20s linear infinite; }
+
+    /* Floating emojis */
+    .floater {
+      position: fixed; bottom: -60px; font-size: 2rem; pointer-events: none; z-index: 0;
+      animation: float-emoji linear infinite;
+    }
+
+    /* Stars */
+    .stars { color: #fbbf24; letter-spacing: 2px; }
+
+    /* Card hover */
+    .product-card { transition: transform 0.25s, box-shadow 0.25s; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 0 30px #39ff1444; }
+
+    /* Size button */
+    .size-btn {
+      border: 2px solid #333; border-radius: 6px; padding: 6px 14px; cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .size-btn:hover, .size-btn.active { border-color: #333; background: transparent; color: #f0f0f0; cursor: default; }
+
+    /* Modal */
+    .modal-bg { display: none; position: fixed; inset: 0; background: #000000cc; z-index: 100; align-items: center; justify-content: center; }
+    .modal-bg.open { display: flex; }
+
+    /* Review carousel */
+    .review-track { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: none; }
+    .review-track::-webkit-scrollbar { display: none; }
+    .review-card { min-width: 280px; scroll-snap-align: start; }
+
+    /* Gradient BG hero */
+    .hero-bg {
+      background: radial-gradient(ellipse at 70% 50%, #1a3a0a 0%, #0a0a0a 60%),
+                  radial-gradient(ellipse at 20% 80%, #2a1500 0%, transparent 60%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating emojis -->
+<span class="floater" style="left:5%;animation-duration:12s;animation-delay:0s;">🐔</span>
+<span class="floater" style="left:15%;animation-duration:15s;animation-delay:3s;">🏀</span>
+<span class="floater" style="left:28%;animation-duration:10s;animation-delay:6s;">🐔</span>
+<span class="floater" style="left:45%;animation-duration:14s;animation-delay:1.5s;">🟢</span>
+<span class="floater" style="left:60%;animation-duration:11s;animation-delay:4s;">🏀</span>
+<span class="floater" style="left:75%;animation-duration:13s;animation-delay:2s;">🐔</span>
+<span class="floater" style="left:88%;animation-duration:16s;animation-delay:7s;">🟢</span>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-wrap py-2 font-body font-800 text-sm tracking-widest uppercase z-10 relative">
+  <div class="ticker-track">
+    <span class="mx-8">🐔 GREEN GREEN CHICKEN EVERYWHERE 🏀</span>
+    <span class="mx-8">⚡ FREE US SHIPPING + TRACKING</span>
+    <span class="mx-8">🔥 SELLING FAST – FEW LEFT AT $28.99</span>
+    <span class="mx-8">✅ 30-DAY HAPPINESS GUARANTEE</span>
+    <span class="mx-8">🐔 GREEN GREEN CHICKEN EVERYWHERE 🏀</span>
+    <span class="mx-8">⚡ FREE US SHIPPING + TRACKING</span>
+    <span class="mx-8">🔥 SELLING FAST – FEW LEFT AT $28.99</span>
+    <span class="mx-8">✅ 30-DAY HAPPINESS GUARANTEE</span>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero-bg min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 relative overflow-hidden">
+  <!-- Big blurred orbs -->
+  <div class="absolute top-10 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl" style="background:#39ff14;"></div>
+  <div class="absolute bottom-10 right-1/4 w-80 h-80 rounded-full opacity-10 blur-3xl" style="background:#ff6b00;"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <div class="hero-anim inline-block mb-4">
+      <span class="badge-bounce inline-block bg-chicken text-black text-xs font-body font-800 uppercase tracking-widest px-4 py-1 rounded-full">
+        🔥 Viral TikTok Sensation
+      </span>
+    </div>
+
+    <h1 class="hero-anim-2 font-display text-7xl sm:text-9xl leading-none mb-2">
+      <span class="shimmer-text">GREEN GREEN<br/>CHICKEN</span>
+    </h1>
+    <div class="hero-anim-2 font-display text-5xl sm:text-6xl text-chicken mb-6">🐔🏀 EVERYWHERE!</div>
+
+    <p class="hero-anim-3 font-body text-xl sm:text-2xl text-gray-300 mb-2 font-700">
+      The Viral Chant Kids Chant Everywhere
+    </p>
+    <p class="hero-anim-3 font-body text-base text-lime font-800 uppercase tracking-widest mb-8">
+      ⚡ Limited Stock – Kids Going Crazy For This
+    </p>
+
+    <div class="hero-anim-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#products" class="pulse-btn bg-lime text-black font-body font-900 text-lg px-10 py-4 rounded-full uppercase tracking-wide">
+        Shop Now 🛒
+      </a>
+      <div class="font-body text-sm text-gray-400">
+        ⭐⭐⭐⭐⭐ &nbsp;<strong class="text-white">4.9/5</strong>&nbsp; from 124 reviews
+      </div>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="hero-anim-4 mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-400 font-body">
+      <span>🇺🇸 Printed in USA</span>
+      <span>📦 Free Shipping + Tracking</span>
+      <span>↩️ 30-Day Returns</span>
+      <span>🔒 Secure PayPal Checkout</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section id="products" class="py-20 px-4 bg-dark relative z-10">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-5xl sm:text-6xl text-center mb-2 shimmer-text">GRAB YOURS</h2>
+    <p class="text-center text-gray-400 font-body mb-12 text-lg">Selling Fast – Few Left at <strong class="text-lime">$28.99</strong></p>
+
+    <div id="shop" class="grid sm:grid-cols-2 gap-8">
+
+      <!-- Black T-shirt -->
+      <div class="product-card bg-card rounded-3xl overflow-hidden border border-gray-800">
+        <div class="relative">
+          <div class="w-full aspect-square relative flex flex-col items-center justify-center" style="background:linear-gradient(135deg,#1a3d0f 0%,#0f2808 100%);" id="black-img-wrap">
+            <img src="black-front.png" alt="Green Green Chicken Black T-Shirt" class="absolute inset-0 w-full h-full object-contain p-6" />
+          </div>
+          <div class="absolute top-4 left-4 bg-chicken text-black text-xs font-body font-800 px-3 py-1 rounded-full uppercase tracking-wide">🔥 Best Seller</div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-3xl text-white mb-1">BLACK TEE</h3>
+          <p class="font-body text-gray-400 text-sm mb-4">Green Green Chicken – Kids Edition</p>
+          <div class="flex items-center gap-3 mb-5">
+            <span class="font-body font-900 text-2xl text-lime">$28.99</span>
+            <span class="font-body text-gray-500 line-through text-lg">$36.99</span>
+            <span class="bg-chicken text-black text-xs font-800 px-2 py-0.5 rounded font-body">SAVE $8</span>
+          </div>
+
+          <!-- Sizes – display only -->
+          <div class="mb-2">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-body text-sm text-gray-400 font-700 uppercase tracking-wide">Available Sizes</span>
+              <button onclick="openModal('sizeModal')" class="font-body text-xs text-lime underline">Size Guide</button>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="size-btn font-body text-sm cursor-default">XS</span>
+              <span class="size-btn font-body text-sm cursor-default">S</span>
+              <span class="size-btn font-body text-sm cursor-default">M</span>
+              <span class="size-btn font-body text-sm cursor-default">L</span>
+              <span class="size-btn font-body text-sm cursor-default">XL</span>
+            </div>
+          </div>
+
+          <p class="font-body text-xs text-gray-500 mb-4 flex items-center gap-1">
+            <span class="text-chicken">👆</span> You'll pick your exact size on the next page
+          </p>
+
+          <a href="https://www.paypal.com/ncp/payment/NZ358DVAKU32G" target="_blank" rel="noopener" class="pulse-btn w-full bg-lime text-black font-body font-900 text-lg py-4 rounded-2xl uppercase tracking-wide flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.828l-1.323 8.395H12.6c.46 0 .852-.334.924-.787l.038-.193.733-4.63.047-.256a.932.932 0 0 1 .924-.787h.581c3.765 0 6.712-1.53 7.573-5.953.362-1.852.175-3.398-.798-4.584z"/></svg>
+            Buy Now – PayPal
+          </a>
+        </div>
+      </div>
+
+      <!-- White T-shirt -->
+      <div class="product-card bg-card rounded-3xl overflow-hidden border border-gray-800">
+        <div class="relative">
+          <div class="w-full aspect-square relative flex flex-col items-center justify-center" style="background:linear-gradient(135deg,#1a3d0f 0%,#0f2808 100%);">
+            <img src="white-front.png" alt="Green Green Chicken White T-Shirt" class="absolute inset-0 w-full h-full object-contain p-6" />
+          </div>
+          <div class="absolute top-4 left-4 bg-lime text-black text-xs font-body font-800 px-3 py-1 rounded-full uppercase tracking-wide">⚡ Fresh Drop</div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-3xl text-white mb-1">WHITE TEE</h3>
+          <p class="font-body text-gray-400 text-sm mb-4">Green Green Chicken – Kids Edition</p>
+          <div class="flex items-center gap-3 mb-5">
+            <span class="font-body font-900 text-2xl text-lime">$28.99</span>
+            <span class="font-body text-gray-500 line-through text-lg">$36.99</span>
+            <span class="bg-chicken text-black text-xs font-800 px-2 py-0.5 rounded font-body">SAVE $8</span>
+          </div>
+
+          <!-- Sizes – display only -->
+          <div class="mb-2">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-body text-sm text-gray-400 font-700 uppercase tracking-wide">Available Sizes</span>
+              <button onclick="openModal('sizeModal')" class="font-body text-xs text-lime underline">Size Guide</button>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="size-btn font-body text-sm cursor-default">XS</span>
+              <span class="size-btn font-body text-sm cursor-default">S</span>
+              <span class="size-btn font-body text-sm cursor-default">M</span>
+              <span class="size-btn font-body text-sm cursor-default">L</span>
+              <span class="size-btn font-body text-sm cursor-default">XL</span>
+            </div>
+          </div>
+
+          <p class="font-body text-xs text-gray-500 mb-4 flex items-center gap-1">
+            <span class="text-chicken">👆</span> You'll pick your exact size on the next page
+          </p>
+
+          <a href="https://www.paypal.com/ncp/payment/NZ358DVAKU32G" target="_blank" rel="noopener" class="pulse-btn w-full bg-lime text-black font-body font-900 text-lg py-4 rounded-2xl uppercase tracking-wide flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.828l-1.323 8.395H12.6c.46 0 .852-.334.924-.787l.038-.193.733-4.63.047-.256a.932.932 0 0 1 .924-.787h.581c3.765 0 6.712-1.53 7.573-5.953.362-1.852.175-3.398-.798-4.584z"/></svg>
+            Buy Now – PayPal
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scarcity bar -->
+    <div class="mt-10 text-center">
+      <p class="font-body text-sm text-gray-400 mb-2">🔥 <strong class="text-chicken">23 people</strong> are looking at this right now</p>
+      <div class="max-w-sm mx-auto bg-gray-800 rounded-full h-3 overflow-hidden">
+        <div class="h-full rounded-full" style="width:78%;background:linear-gradient(90deg,#39ff14,#ff6b00);"></div>
+      </div>
+      <p class="font-body text-xs text-gray-500 mt-1">78% of stock sold — grab yours before it's gone!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY YOU'LL LOVE IT ============ -->
+<section class="py-20 px-4" style="background: linear-gradient(180deg, #0a0a0a 0%, #0d1a05 50%, #0a0a0a 100%);">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-5xl sm:text-6xl text-center mb-4">WHY KIDS <span class="text-lime">LOSE THEIR MIND</span></h2>
+    <p class="text-center text-gray-400 font-body mb-14 text-lg">Premium quality that matches the hype</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-card border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">👕</div>
+        <h3 class="font-display text-2xl text-lime mb-2">90% PREMIUM COTTON</h3>
+        <p class="font-body text-gray-400 text-sm">Ultra-soft cotton blend that feels incredible against skin. Kids actually want to wear it — every single day.</p>
+      </div>
+      <div class="bg-card border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">💪</div>
+        <h3 class="font-display text-2xl text-lime mb-2">BUILT TO LAST</h3>
+        <p class="font-body text-gray-400 text-sm">Durable, preshrunk fabric keeps its shape wash after wash. Machine wash safe — because kids are messy.</p>
+      </div>
+      <div class="bg-card border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">🇺🇸</div>
+        <h3 class="font-display text-2xl text-lime mb-2">PRINTED IN USA</h3>
+        <p class="font-body text-gray-400 text-sm">On-demand printing means vibrant, fade-resistant colors. The design stays bright chant after chant.</p>
+      </div>
+      <div class="bg-card border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">📦</div>
+        <h3 class="font-display text-2xl text-lime mb-2">FREE US SHIPPING</h3>
+        <p class="font-body text-gray-400 text-sm">Full tracking included. You'll know exactly when it's arriving so you can plan the big reveal.</p>
+      </div>
+      <div class="bg-card border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">↩️</div>
+        <h3 class="font-display text-2xl text-lime mb-2">30-DAY GUARANTEE</h3>
+        <p class="font-body text-gray-400 text-sm">Not obsessed? Return it. No questions asked. We're that confident your kid will love it.</p>
+      </div>
+      <div class="bg-card border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">🔒</div>
+        <h3 class="font-display text-2xl text-lime mb-2">SECURE PAYPAL</h3>
+        <p class="font-body text-gray-400 text-sm">Buyer protection on every order. Shop with total confidence — your transaction is always protected.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="py-20 px-4 bg-dark">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-5xl sm:text-6xl mb-3">KIDS <span class="text-chicken">CAN'T STOP</span> CHANTING</h2>
+      <div class="flex items-center justify-center gap-2 font-body">
+        <span class="stars text-2xl">★★★★★</span>
+        <span class="text-white font-800 text-xl">4.9 out of 5</span>
+        <span class="text-gray-400">· 124 reviews</span>
+      </div>
+    </div>
+
+    <div class="review-track">
+      <!-- Review 1 -->
+      <div class="review-card bg-card border border-gray-800 rounded-2xl p-6">
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="font-body text-gray-200 text-sm leading-relaxed mb-4">"My son REFUSES to take it off... we have to wash it while he sleeps. Best $28 I've ever spent."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-lime flex items-center justify-center text-black font-800 font-body text-sm">SM</div>
+          <div>
+            <p class="font-body font-800 text-white text-sm">Sarah M.</p>
+            <p class="font-body text-gray-500 text-xs">Texas · Verified Purchase</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card bg-card border border-gray-800 rounded-2xl p-6">
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="font-body text-gray-200 text-sm leading-relaxed mb-4">"Daughter started chanting 'Green Green Chicken' at dinner. Her whole class wants one now. Worth every penny."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-chicken flex items-center justify-center text-black font-800 font-body text-sm">LK</div>
+          <div>
+            <p class="font-body font-800 text-white text-sm">Laura K.</p>
+            <p class="font-body text-gray-500 text-xs">California · Verified Purchase</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card bg-card border border-gray-800 rounded-2xl p-6">
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="font-body text-gray-200 text-sm leading-relaxed mb-4">"Ordered lime green & black for my twins. They wore them to the basketball game — other parents kept asking where we got them!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-lime flex items-center justify-center text-black font-800 font-body text-sm">MT</div>
+          <div>
+            <p class="font-body font-800 text-white text-sm">Marco T.</p>
+            <p class="font-body text-gray-500 text-xs">Florida · Verified Purchase</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="review-card bg-card border border-gray-800 rounded-2xl p-6">
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="font-body text-gray-200 text-sm leading-relaxed mb-4">"Best gift I could've found — nephew is obsessed. He wore it for his birthday photos. The quality is genuinely impressive."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-chicken flex items-center justify-center text-black font-800 font-body text-sm">JR</div>
+          <div>
+            <p class="font-body font-800 text-white text-sm">Jessica R.</p>
+            <p class="font-body text-gray-500 text-xs">New York · Verified Purchase</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 5 – Kid -->
+      <div class="review-card bg-card border border-lime rounded-2xl p-6 relative">
+        <div class="absolute -top-3 left-4 bg-lime text-black text-xs font-800 font-body px-3 py-1 rounded-full">🌟 Fan Favourite</div>
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="font-body text-gray-200 text-sm leading-relaxed mb-4">"GREEN GREEN CHICKEN!!! This is my favourite shirt ever. I wear it every day to school."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-lime flex items-center justify-center text-black font-800 font-body text-sm">🐔</div>
+          <div>
+            <p class="font-body font-800 text-white text-sm">Tom, age 9</p>
+            <p class="font-body text-gray-500 text-xs">Real Kid · Verified Purchase</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RISK FREE ============ -->
+<section class="py-16 px-4" style="background:linear-gradient(135deg,#0d1a05,#1a0a00,#0d1a05);">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="font-display text-4xl sm:text-5xl mb-4">ZERO RISK. <span class="text-lime">100% WORTH IT.</span></h2>
+    <p class="font-body text-gray-300 text-lg mb-10">We've removed every reason not to grab one.</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div class="flex flex-col items-center gap-2">
+        <div class="text-5xl">↩️</div>
+        <p class="font-body font-800 text-white text-sm">30-Day Returns</p>
+        <p class="font-body text-gray-500 text-xs">No questions</p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="text-5xl">📦</div>
+        <p class="font-body font-800 text-white text-sm">Free Shipping</p>
+        <p class="font-body text-gray-500 text-xs">Full tracking</p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="text-5xl">🔒</div>
+        <p class="font-body font-800 text-white text-sm">Secure PayPal</p>
+        <p class="font-body text-gray-500 text-xs">Buyer protection</p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="text-5xl">🇺🇸</div>
+        <p class="font-body font-800 text-white text-sm">USA Printed</p>
+        <p class="font-body text-gray-500 text-xs">Premium quality</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="py-20 px-4 bg-dark">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="font-display text-4xl sm:text-5xl text-center mb-12">GOT <span class="text-lime">QUESTIONS?</span></h2>
+
+    <div class="space-y-4">
+      <details class="bg-card border border-gray-800 rounded-2xl group">
+        <summary class="flex items-center justify-between p-6 cursor-pointer font-body font-800 text-white list-none">
+          <span>How does sizing run?</span>
+          <span class="text-lime text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <div class="px-6 pb-6 font-body text-gray-400 text-sm leading-relaxed">
+          Our tees run true to size and are preshrunk, so no need to size up. Use our size guide for exact measurements. When in doubt between sizes, we recommend going one size up for a relaxed fit kids love. <button onclick="openModal('sizeModal')" class="text-lime underline ml-1">View Size Guide →</button>
+        </div>
+      </details>
+
+      <details class="bg-card border border-gray-800 rounded-2xl group">
+        <summary class="flex items-center justify-between p-6 cursor-pointer font-body font-800 text-white list-none">
+          <span>When will my order arrive?</span>
+          <span class="text-lime text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <div class="px-6 pb-6 font-body text-gray-400 text-sm leading-relaxed">
+          Orders are printed on-demand in the USA and typically ship within 2–4 business days. US delivery takes an additional 3–7 business days. You'll receive a tracking link by email as soon as your order ships — so you can count down the days together!
+        </div>
+      </details>
+
+      <details class="bg-card border border-gray-800 rounded-2xl group">
+        <summary class="flex items-center justify-between p-6 cursor-pointer font-body font-800 text-white list-none">
+          <span>What's the return policy?</span>
+          <span class="text-lime text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <div class="px-6 pb-6 font-body text-gray-400 text-sm leading-relaxed">
+          Simple: if you're not 100% happy within 30 days of receiving your order, contact us and we'll sort it out — exchange, return, or refund, no questions asked. We want every kid doing the chant in a shirt they love.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER CTA ============ -->
+<section class="py-24 px-4 text-center relative overflow-hidden" style="background:linear-gradient(135deg,#0d2206 0%,#1a0d00 50%,#0d2206 100%);">
+  <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(45deg,#39ff14 0,#39ff14 1px,transparent 0,transparent 50%);background-size:20px 20px;"></div>
+  <div class="relative z-10 max-w-2xl mx-auto">
+    <p class="font-body font-800 text-lime uppercase tracking-widest text-sm mb-4">Limited Stock Remaining</p>
+    <h2 class="font-display text-6xl sm:text-8xl leading-none mb-6">
+      <span class="shimmer-text">YOUR KID<br>WANTS THIS.</span>
+    </h2>
+    <p class="font-body text-gray-300 text-xl mb-8">Join 124+ happy parents — and one very enthusiastic 9-year-old.</p>
+    <a href="#shop" class="pulse-btn inline-block bg-lime text-black font-body font-900 text-xl px-12 py-5 rounded-full uppercase tracking-wide">
+      Grab Yours Now 🐔🏀
+    </a>
+    <p class="font-body text-gray-500 text-sm mt-6">✅ Free Shipping &nbsp;·&nbsp; ↩️ 30-Day Returns &nbsp;·&nbsp; 🔒 Secure PayPal</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-dark border-t border-gray-900 py-10 px-4 text-center font-body text-gray-600 text-sm">
+  <p class="text-2xl mb-3">🐔🏀</p>
+  <p class="font-800 text-white text-base mb-2">greengreenchicken.store</p>
+  <p class="mb-4">© 2024 Green Green Chicken. All rights reserved.</p>
+  <div class="flex flex-wrap justify-center gap-6 text-gray-600">
+    <button onclick="openModal('privacyModal')" class="hover:text-lime transition-colors">Privacy Policy</button>
+    <button onclick="openModal('termsModal')" class="hover:text-lime transition-colors">Terms of Service</button>
+    <a href="/cdn-cgi/l/email-protection#96f5f9f8e2f7f5e2d6f1e4f3f3f8f1e4f3f3f8f5fefff5fdf3f8b8e5e2f9e4f3" class="hover:text-lime transition-colors">Contact Us</a>
+    <button onclick="openModal('shippingModal')" class="hover:text-lime transition-colors">Shipping Info</button>
+  </div>
+</footer>
+
+<!-- ============ SIZE GUIDE MODAL ============ -->
+<div id="sizeModal" class="modal-bg" onclick="if(event.target===this)closeModal('sizeModal')">
+  <div class="bg-card border border-gray-700 rounded-3xl p-8 max-w-xl w-full mx-4 relative max-h-[90vh] overflow-y-auto">
+    <button onclick="closeModal('sizeModal')" class="absolute top-4 right-4 text-gray-500 hover:text-white font-body text-2xl">✕</button>
+    <h3 class="font-display text-4xl text-lime mb-1">SIZE GUIDE</h3>
+    <p class="font-body text-gray-500 text-xs mb-5">Measurements provided by Gelato. Garments may vary ±2.5cm (1 in).</p>
+
+    <!-- How to measure -->
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-4 mb-5 space-y-3 font-body text-sm text-gray-400">
+      <p><strong class="text-lime">A) Length</strong> — Place tape beside the collar at the top (high point shoulder), pull to the bottom of the shirt.</p>
+      <p><strong class="text-lime">B) Half Chest</strong> — Lay flat, measure left to right across the chest ~2cm below the arms.</p>
+      <p><strong class="text-lime">C) Height</strong> — Height of child most likely to fit well in the specific size.</p>
+    </div>
+
+    <!-- Unit toggle -->
+    <div class="flex gap-2 mb-4">
+      <button id="btn-cm" onclick="switchUnit('cm')" class="font-body font-800 text-sm px-4 py-1.5 rounded-lg bg-lime text-black transition-colors">cm</button>
+      <button id="btn-in" onclick="switchUnit('in')" class="font-body font-800 text-sm px-4 py-1.5 rounded-lg bg-gray-800 text-gray-400 transition-colors">inches</button>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto">
+      <table class="w-full font-body text-sm text-gray-300 min-w-[340px]">
+        <thead>
+          <tr class="border-b border-gray-700">
+            <th class="text-left py-2 pr-3 text-lime font-800"></th>
+            <th class="py-2 px-2 text-center font-800 text-white">XS</th>
+            <th class="py-2 px-2 text-center font-800 text-white">S</th>
+            <th class="py-2 px-2 text-center font-800 text-white">M</th>
+            <th class="py-2 px-2 text-center font-800 text-white">L</th>
+            <th class="py-2 px-2 text-center font-800 text-white">XL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-900">
+            <td class="py-3 pr-3 text-lime font-800 whitespace-nowrap">A) Length</td>
+            <td class="py-3 px-2 text-center unit-cm">48.3 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">53 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">56.2 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">59.4 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">61.9 cm</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">19"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">20.9"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">22.1"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">23.4"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">24.4"</td>
+          </tr>
+          <tr class="border-b border-gray-900">
+            <td class="py-3 pr-3 text-lime font-800 whitespace-nowrap">B) Half Chest</td>
+            <td class="py-3 px-2 text-center unit-cm">33 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">38.7 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">41.3 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">43.8 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">46.4 cm</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">13"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">15.2"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">16.3"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">17.2"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">18.3"</td>
+          </tr>
+          <tr>
+            <td class="py-3 pr-3 text-lime font-800 whitespace-nowrap">B) Width</td>
+            <td class="py-3 px-2 text-center unit-cm">66 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">77.4 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">82.6 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">87.6 cm</td>
+            <td class="py-3 px-2 text-center unit-cm">92.8 cm</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">26"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">30.5"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">32.5"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">34.5"</td>
+            <td class="py-3 px-2 text-center unit-in" style="display:none">36.5"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="font-body text-gray-600 text-xs mt-4">💡 When between sizes, go up for a comfier fit.</p>
+    <button onclick="closeModal('sizeModal')" class="mt-5 w-full bg-lime text-black font-body font-900 py-3 rounded-xl uppercase tracking-wide">
+      Got It – Shop Now 🛒
+    </button>
+  </div>
+</div>
+
+<!-- ============ PRIVACY POLICY MODAL ============ -->
+<div id="privacyModal" class="modal-bg" onclick="if(event.target===this)closeModal('privacyModal')">
+  <div class="bg-card border border-gray-700 rounded-3xl p-8 max-w-2xl w-full mx-4 relative max-h-[85vh] overflow-y-auto">
+    <button onclick="closeModal('privacyModal')" class="absolute top-4 right-4 text-gray-500 hover:text-white font-body text-2xl">✕</button>
+    <h3 class="font-display text-4xl text-lime mb-1">PRIVACY POLICY</h3>
+    <p class="font-body text-gray-500 text-xs mb-6">Last updated: January 1, 2025 · greengreenchicken.store</p>
+
+    <div class="font-body text-gray-300 text-sm leading-relaxed space-y-5">
+      <div>
+        <h4 class="font-800 text-white mb-1">1. Information We Collect</h4>
+        <p>When you place an order, we collect your name, email address, shipping address, and payment information (processed securely by PayPal — we never store your card details). We may also collect your IP address and browser type for security and analytics purposes.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">2. How We Use Your Information</h4>
+        <p>We use your information solely to process and fulfill your order, send order confirmations and shipping updates, respond to customer service inquiries, and improve our website experience. We do not sell, trade, or rent your personal information to third parties.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">3. PayPal Payments</h4>
+        <p>All payment transactions are processed through PayPal. When you click "Buy Now – PayPal," you are redirected to PayPal's secure platform. Your financial details are handled entirely by PayPal under their privacy policy and are never accessible to us.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">4. Cookies</h4>
+        <p>Our website uses minimal cookies necessary for the site to function properly (e.g., session state). We do not use tracking cookies or third-party advertising cookies.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">5. Data Retention</h4>
+        <p>We retain your order data for up to 3 years for tax and accounting purposes, then securely delete it. You may request deletion of your personal data at any time by emailing us.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">6. Your Rights</h4>
+        <p>You have the right to access, correct, or delete any personal data we hold about you. To exercise these rights, contact us at <a href="/cdn-cgi/l/email-protection#61020e0f1500021521061304040f061304040f020908020a040f4f12150e1304" class="text-lime underline"><span class="__cf_email__" data-cfemail="6b0804051f0a081f2b0c190e0e050c190e0e0508030208000e0545181f04190e">[email&#160;protected]</span></a>.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">7. Children's Privacy</h4>
+        <p>Our products are designed for children, but our website and purchasing process is intended for adults (parents and guardians). We do not knowingly collect personal data from anyone under 13 years of age.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">8. Changes to This Policy</h4>
+        <p>We may update this policy from time to time. Changes will be posted on this page with a new effective date. Continued use of the site constitutes acceptance of the updated policy.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">9. Contact</h4>
+        <p>Questions? Email us at <a href="/cdn-cgi/l/email-protection#d9bab6b7adb8baad99beabbcbcb7beabbcbcb7bab1b0bab2bcb7f7aaadb6abbc" class="text-lime underline"><span class="__cf_email__" data-cfemail="3a5955544e5b594e7a5d485f5f545d485f5f5459525359515f5414494e55485f">[email&#160;protected]</span></a>.</p>
+      </div>
+    </div>
+
+    <button onclick="closeModal('privacyModal')" class="mt-8 w-full bg-lime text-black font-body font-900 py-3 rounded-xl uppercase tracking-wide">Close</button>
+  </div>
+</div>
+
+<!-- ============ TERMS OF SERVICE MODAL ============ -->
+<div id="termsModal" class="modal-bg" onclick="if(event.target===this)closeModal('termsModal')">
+  <div class="bg-card border border-gray-700 rounded-3xl p-8 max-w-2xl w-full mx-4 relative max-h-[85vh] overflow-y-auto">
+    <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-gray-500 hover:text-white font-body text-2xl">✕</button>
+    <h3 class="font-display text-4xl text-lime mb-1">TERMS OF SERVICE</h3>
+    <p class="font-body text-gray-500 text-xs mb-6">Last updated: January 1, 2025 · greengreenchicken.store</p>
+
+    <div class="font-body text-gray-300 text-sm leading-relaxed space-y-5">
+      <div>
+        <h4 class="font-800 text-white mb-1">1. Acceptance of Terms</h4>
+        <p>By accessing or purchasing from greengreenchicken.store, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">2. Products & Pricing</h4>
+        <p>All products are printed on-demand in the USA. Prices are listed in USD and are subject to change without notice. We reserve the right to refuse or cancel orders at our discretion, including in cases of pricing errors or suspected fraud.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">3. Payment</h4>
+        <p>All payments are processed through PayPal. By completing a purchase, you agree to PayPal's terms of service. Your order is not confirmed until payment is successfully processed.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">4. Shipping & Delivery</h4>
+        <p>We ship within the United States with full tracking. Estimated delivery is 5–11 business days from the date of order. Delivery times are estimates and not guaranteed. We are not responsible for delays caused by carriers or circumstances outside our control.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">5. Returns & Refunds</h4>
+        <p>We offer a 30-day happiness guarantee. If you are not satisfied with your order for any reason, contact us within 30 days of delivery at <a href="/cdn-cgi/l/email-protection#2a4945445e4b495e6a4d584f4f444d584f4f4449424349414f4404595e45584f" class="text-lime underline"><span class="__cf_email__" data-cfemail="c5a6aaabb1a4a6b185a2b7a0a0aba2b7a0a0aba6adaca6aea0abebb6b1aab7a0">[email&#160;protected]</span></a> and we will arrange a return, exchange, or full refund — no questions asked.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">6. Intellectual Property</h4>
+        <p>All content on this website — including text, graphics, logos, and product designs — is the property of Green Green Chicken and may not be reproduced, distributed, or used without prior written permission.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">7. Limitation of Liability</h4>
+        <p>Green Green Chicken shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or website. Our total liability shall not exceed the amount paid for the specific order in question.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">8. Governing Law</h4>
+        <p>These terms are governed by the laws of the United States. Any disputes shall be resolved through good-faith negotiation or, if necessary, binding arbitration.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">9. Contact</h4>
+        <p>For any questions regarding these terms, reach us at <a href="/cdn-cgi/l/email-protection#e685898892878592a681948383888194838388858e8f858d8388c89592899483" class="text-lime underline"><span class="__cf_email__" data-cfemail="accfc3c2d8cdcfd8eccbdec9c9c2cbdec9c9c2cfc4c5cfc7c9c282dfd8c3dec9">[email&#160;protected]</span></a>.</p>
+      </div>
+    </div>
+
+    <button onclick="closeModal('termsModal')" class="mt-8 w-full bg-lime text-black font-body font-900 py-3 rounded-xl uppercase tracking-wide">Close</button>
+  </div>
+</div>
+
+<!-- ============ SHIPPING INFO MODAL ============ -->
+<div id="shippingModal" class="modal-bg" onclick="if(event.target===this)closeModal('shippingModal')">
+  <div class="bg-card border border-gray-700 rounded-3xl p-8 max-w-2xl w-full mx-4 relative max-h-[85vh] overflow-y-auto">
+    <button onclick="closeModal('shippingModal')" class="absolute top-4 right-4 text-gray-500 hover:text-white font-body text-2xl">✕</button>
+    <h3 class="font-display text-4xl text-lime mb-1">SHIPPING INFO</h3>
+    <p class="font-body text-gray-500 text-xs mb-6">Everything you need to know · greengreenchicken.store</p>
+
+    <div class="font-body text-gray-300 text-sm leading-relaxed space-y-5">
+
+      <!-- Key stats -->
+      <div class="grid grid-cols-3 gap-4 my-4">
+        <div class="bg-gray-900 rounded-2xl p-4 text-center border border-gray-800">
+          <div class="text-3xl mb-1">📦</div>
+          <p class="font-800 text-white text-sm">Free</p>
+          <p class="text-gray-500 text-xs">US Shipping</p>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-4 text-center border border-gray-800">
+          <div class="text-3xl mb-1">📍</div>
+          <p class="font-800 text-white text-sm">Full Tracking</p>
+          <p class="text-gray-500 text-xs">Every order</p>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-4 text-center border border-gray-800">
+          <div class="text-3xl mb-1">🇺🇸</div>
+          <p class="font-800 text-white text-sm">USA Only</p>
+          <p class="text-gray-500 text-xs">Printed &amp; shipped</p>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-800 text-white mb-1">Processing Time</h4>
+        <p>Because every tee is printed on-demand just for you, orders typically take <strong class="text-white">2–4 business days</strong> to print and prepare before they ship. You'll get an email confirmation the moment your order is on its way.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">Delivery Time</h4>
+        <p>Once shipped, US domestic delivery takes <strong class="text-white">3–7 business days</strong>. Total estimated time from order to doorstep: <strong class="text-lime">5–11 business days</strong>. Orders placed on weekends or holidays begin processing the next business day.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">Tracking Your Order</h4>
+        <p>As soon as your order ships, you'll receive an email with a tracking number. Use it to follow your package every step of the way. If you don't receive a tracking email within 5 business days of ordering, check your spam folder or contact us.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">Shipping Carrier</h4>
+        <p>We ship via USPS or UPS depending on your location. Carrier selection is automatic and optimized for the fastest delivery to your area.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">Lost or Damaged Packages</h4>
+        <p>If your package is lost in transit or arrives damaged, contact us immediately at <a href="/cdn-cgi/l/email-protection#fb9894958f9a988fbb9c899e9e959c899e9e9598939298909e95d5888f94899e" class="text-lime underline"><span class="__cf_email__" data-cfemail="c6a5a9a8b2a7a5b286a1b4a3a3a8a1b4a3a3a8a5aeafa5ada3a8e8b5b2a9b4a3">[email&#160;protected]</span></a>. We'll make it right — reprint, reship, or refund. No stress.</p>
+      </div>
+      <div>
+        <h4 class="font-800 text-white mb-1">International Shipping</h4>
+        <p>At this time, we ship to <strong class="text-white">US addresses only</strong>. International shipping is something we're working on — stay tuned!</p>
+      </div>
+      <div class="bg-lime bg-opacity-10 border border-lime border-opacity-30 rounded-xl p-4">
+        <p class="text-lime font-800 text-sm mb-1">🎁 Free Shipping — Always</p>
+        <p class="text-gray-400 text-xs">We offer free standard shipping on every US order, no minimum required. No promo code needed.</p>
+      </div>
+    </div>
+
+    <button onclick="closeModal('shippingModal')" class="mt-8 w-full bg-lime text-black font-body font-900 py-3 rounded-xl uppercase tracking-wide">Got It – Shop Now 🛒</button>
+  </div>
+</div>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+  function switchUnit(unit) {
+    document.querySelectorAll('.unit-cm').forEach(el => el.style.display = unit === 'cm' ? '' : 'none');
+    document.querySelectorAll('.unit-in').forEach(el => el.style.display = unit === 'in' ? '' : 'none');
+    document.getElementById('btn-cm').className = 'font-body font-800 text-sm px-4 py-1.5 rounded-lg transition-colors ' + (unit === 'cm' ? 'bg-lime text-black' : 'bg-gray-800 text-gray-400');
+    document.getElementById('btn-in').className = 'font-body font-800 text-sm px-4 py-1.5 rounded-lg transition-colors ' + (unit === 'in' ? 'bg-lime text-black' : 'bg-gray-800 text-gray-400');
+  }
+
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      ['sizeModal','privacyModal','termsModal','shippingModal'].forEach(closeModal);
+    }
+  });
+
+</script>
+
+</body>
+</html>
