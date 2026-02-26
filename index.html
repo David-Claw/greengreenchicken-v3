@@ -154,11 +154,11 @@
   <div class="ticker-track">
     <span class="mx-8">🐔 GREEN GREEN CHICKEN EVERYWHERE 🏀</span>
     <span class="mx-8">⚡ FREE US SHIPPING + TRACKING</span>
-    <span class="mx-8">🔥 SELLING FAST – FEW LEFT AT $28.99</span>
+    <span class="mx-8">🔥 SELLING FAST – FEW LEFT AT $26.99</span>
     <span class="mx-8">✅ 30-DAY HAPPINESS GUARANTEE</span>
     <span class="mx-8">🐔 GREEN GREEN CHICKEN EVERYWHERE 🏀</span>
     <span class="mx-8">⚡ FREE US SHIPPING + TRACKING</span>
-    <span class="mx-8">🔥 SELLING FAST – FEW LEFT AT $28.99</span>
+    <span class="mx-8">🔥 SELLING FAST – FEW LEFT AT $26.99</span>
     <span class="mx-8">✅ 30-DAY HAPPINESS GUARANTEE</span>
   </div>
 </div>
@@ -198,7 +198,7 @@
     </div>
 
     <!-- Trust badges -->
-    <div class="hero-anim-4 mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-400 font-body">
+    <div class="hero-anim-4 mt-6 flex flex-wrap justify-center gap-6 text-sm text-gray-400 font-body">
       <span>🇺🇸 Printed in USA</span>
       <span>📦 Free Shipping + Tracking</span>
       <span>↩️ 30-Day Returns</span>
@@ -208,10 +208,10 @@
 </section>
 
 <!-- ============ PRODUCTS ============ -->
-<section id="products" class="py-20 px-4 bg-dark relative z-10">
+<section id="products" class="pt-10 pb-20 px-4 bg-dark relative z-10">
   <div class="max-w-4xl mx-auto">
     <h2 class="font-display text-5xl sm:text-6xl text-center mb-2 shimmer-text">GRAB YOURS</h2>
-    <p class="text-center text-gray-400 font-body mb-12 text-lg">Selling Fast – Few Left at <strong class="text-lime">$28.99</strong></p>
+    <p class="text-center text-gray-400 font-body mb-12 text-lg">Selling Fast – Few Left at <strong class="text-lime">$26.99</strong></p>
 
     <div id="shop" class="grid sm:grid-cols-2 gap-8">
 
@@ -227,8 +227,8 @@
           <h3 class="font-display text-3xl text-white mb-1">BLACK TEE</h3>
           <p class="font-body text-gray-400 text-sm mb-4">Green Green Chicken – Kids Edition</p>
           <div class="flex items-center gap-3 mb-5">
-            <span class="font-body font-900 text-2xl text-lime">$28.99</span>
-            <span class="font-body text-gray-500 line-through text-lg">$36.99</span>
+            <span class="font-body font-900 text-2xl text-lime">$26.99</span>
+            <span class="font-body text-gray-500 line-through text-lg">$34.99</span>
             <span class="bg-chicken text-black text-xs font-800 px-2 py-0.5 rounded font-body">SAVE $8</span>
           </div>
 
@@ -270,8 +270,8 @@
           <h3 class="font-display text-3xl text-white mb-1">WHITE TEE</h3>
           <p class="font-body text-gray-400 text-sm mb-4">Green Green Chicken – Kids Edition</p>
           <div class="flex items-center gap-3 mb-5">
-            <span class="font-body font-900 text-2xl text-lime">$28.99</span>
-            <span class="font-body text-gray-500 line-through text-lg">$36.99</span>
+            <span class="font-body font-900 text-2xl text-lime">$26.99</span>
+            <span class="font-body text-gray-500 line-through text-lg">$34.99</span>
             <span class="bg-chicken text-black text-xs font-800 px-2 py-0.5 rounded font-body">SAVE $8</span>
           </div>
 
@@ -304,7 +304,7 @@
 
     <!-- Scarcity bar -->
     <div class="mt-10 text-center">
-      <p class="font-body text-sm text-gray-400 mb-2">🔥 <strong class="text-chicken">23 people</strong> are looking at this right now</p>
+      <p class="font-body text-sm text-gray-400 mb-2">🔥 <strong id="scarcity-people" class="text-chicken">23 people</strong> are looking at this right now</p>
       <div class="max-w-sm mx-auto bg-gray-800 rounded-full h-3 overflow-hidden">
         <div class="h-full rounded-full" style="width:78%;background:linear-gradient(90deg,#39ff14,#ff6b00);"></div>
       </div>
@@ -803,7 +803,7 @@
   });
 
   // Live scarcity counter
-  var scarcityPeople = document.querySelector('.text-chicken');
+  var scarcityPeople = document.getElementById('scarcity-people');
   var scarcityBar = document.querySelector('#shop').parentElement.querySelector('.h-full.rounded-full');
   var scarcityText = document.querySelector('#shop').parentElement.querySelector('.text-xs.text-gray-500');
 
